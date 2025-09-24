@@ -1,0 +1,42 @@
+{
+  "name": "GAS Simple Colors",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#1e1e1e",
+    "editor.foreground": "#d4d4d4"
+  },
+  "tokenColors": [
+    {
+      "scope": "keyword.control.gas",
+      "settings": {
+        "foreground": "#64c9ff",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "string.quoted.double.gas, string.quoted.single.gas",
+      "settings": {
+        "foreground": "#bd5622"
+      }
+    },
+    {
+      "scope": "comment.line.double-slash.gas, comment.block.gas",
+      "settings": {
+        "foreground": "#6a9955",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "constant.numeric.gas",
+      "settings": {
+        "foreground": "#b5cea8"
+      }
+    },
+    {
+      "scope": "variable.other.gas, identifier.gas",
+      "settings": {
+        "foreground": "#73559e"
+      }
+    }
+  ]
+}

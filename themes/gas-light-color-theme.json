@@ -1,0 +1,42 @@
+{
+  "name": "GAS Light Colors",
+  "type": "light",
+  "colors": {
+    "editor.background": "#ffffff",
+    "editor.foreground": "#333333"
+  },
+  "tokenColors": [
+    {
+      "scope": "keyword.control.gas",
+      "settings": {
+        "foreground": "#007acc",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": "string.quoted.double.gas, string.quoted.single.gas",
+      "settings": {
+        "foreground": "#b75501"
+      }
+    },
+    {
+      "scope": "comment.line.double-slash.gas, comment.block.gas",
+      "settings": {
+        "foreground": "#008000",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": "constant.numeric.gas",
+      "settings": {
+        "foreground": "#098658"
+      }
+    },
+    {
+      "scope": "variable.other.gas, identifier.gas",
+      "settings": {
+        "foreground": "#795e26"
+      }
+    }
+  ]
+}

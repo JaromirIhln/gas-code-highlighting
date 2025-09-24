@@ -1,0 +1,54 @@
+{
+  "name": "gas-syntax-highlighting",
+  "displayName": "GAS Syntax Highlighting",
+  "description": "Zvýraznění syntaxe pro Google Apps Script (.gs) soubory.",
+  "version": "0.0.1",
+  "publisher": "Jaromír Ihln",
+  "author": {
+    "name": "Jaromír Ihln"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "icon": "images/icon_master.png",
+  "galleryBanner": {
+    "color": "#C80000",
+    "theme": "dark"
+  },
+  "pricing": "Free",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "contributes": {
+    "languages": [
+      {
+        "id": "gas",
+        "aliases": ["Google Apps Script", "gas"],
+        "extensions": [".gs"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "gas",
+        "scopeName": "source.gas",
+        "path": "./syntaxes/gas.tmLanguage.json"
+      }
+    ],
+    "themes": [
+      {
+        "label": "GAS Simple Colors",
+        "uiTheme": "vs-dark",
+        "path": "./themes/gas-simple-color-theme.json",
+         "embeddedLanguages": {
+          "meta.embedded.block.javascript": "javascript"
+        }
+      },
+      {
+        "label": "GAS Light Colors",
+        "uiTheme": "vs",
+        "path": "./themes/gas-light-color-theme.json"
+      }
+    ]
+  }
+}

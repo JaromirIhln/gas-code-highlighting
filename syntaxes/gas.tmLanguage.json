@@ -1,0 +1,67 @@
+{
+  "scopeName": "source.gas",
+  "name": "Google Apps Script",
+  "patterns": [
+    { "include": "#keywords" },
+    { "include": "#strings" },
+    { "include": "#comments" },
+    { "include": "#numbers" },
+    { "include": "#identifiers" }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.gas",
+          "match": "\\b(function|var|let|const|if|else|for|while|return|break|continue|switch|case|default|try|catch|finally|throw|new|this)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.gas",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [{ "name": "constant.character.escape.gas", "match": "\\\\." }]
+        },
+        {
+          "name": "string.quoted.single.gas",
+          "begin": "'",
+          "end": "'",
+          "patterns": [{ "name": "constant.character.escape.gas", "match": "\\\\." }]
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.gas",
+          "begin": "//",
+          "end": "$"
+        },
+        {
+          "name": "comment.block.gas",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.gas",
+          "match": "\\b\\d+(\\.\\d+)?\\b"
+        }
+      ]
+    },
+    "identifiers": {
+      "patterns": [
+        {
+          "name": "variable.other.gas",
+          "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+        }
+      ]
+    }
+  }
+}
