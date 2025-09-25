@@ -22,14 +22,14 @@
     {
       "scope": "comment.line.double-slash.gas, comment.block.gas",
       "settings": {
-        "foreground": "#6a9955",
+        "foreground": "#2023cc",
         "fontStyle": "italic"
       }
     },
     {
       "scope": "constant.numeric.gas",
       "settings": {
-        "foreground": "#b5cea8"
+        "foreground": "#a8cead"
       }
     },
     {

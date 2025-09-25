@@ -7,6 +7,7 @@ function testColor() {
   if (color === "red") {
     console.log("The color is red");
   } else {
-    console.log("The color is not red");
+    console.log("The color is not red", 21);
   }
 }
+/*funguje*/
