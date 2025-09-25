@@ -19,6 +19,7 @@
   "engines": {
     "vscode": "^1.70.0"
   },
+  "main": "./extension.js",
   "contributes": {
     "languages": [
       {
@@ -34,7 +35,7 @@
         "scopeName": "source.gas",
         "path": "./syntaxes/gas.tmLanguage.json",
          "embeddedLanguages": {
-          "meta.embedded.block.gas": "gs"
+          "meta.embedded.block.javascript": "javascript"
         }
       }
     ],

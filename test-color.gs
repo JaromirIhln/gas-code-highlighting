@@ -1,3 +1,7 @@
+// Example function to demonstrate color highlighting
+function getColor() {
+  return "red";
+}
 function testColor() {
   const color = getColor();
   if (color === "red") {
