@@ -22,7 +22,7 @@
     {
       "scope": "comment.line.double-slash.gas, comment.block.gas",
       "settings": {
-        "foreground": "#2023cc",
+        "foreground": "#20cc5c",
         "fontStyle": "italic"
       }
     },

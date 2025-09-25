@@ -11,3 +11,4 @@ function testColor() {
   }
 }
 /*funguje*/
+// This is a comment
