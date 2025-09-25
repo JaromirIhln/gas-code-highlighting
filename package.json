@@ -23,8 +23,8 @@
     "languages": [
       {
         "id": "gas",
-        "aliases": ["Google Apps Script", "gas"],
         "extensions": [".gs"],
+        "aliases": ["Google Apps Script", "gas"],
         "configuration": "./language-configuration.json"
       }
     ],
@@ -32,17 +32,18 @@
       {
         "language": "gas",
         "scopeName": "source.gas",
-        "path": "./syntaxes/gas.tmLanguage.json"
+        "path": "./syntaxes/gas.tmLanguage.json",
+         "embeddedLanguages": {
+          "meta.embedded.block.gas": "gs"
+        }
       }
     ],
     "themes": [
       {
         "label": "GAS Simple Colors",
         "uiTheme": "vs-dark",
-        "path": "./themes/gas-simple-color-theme.json",
-         "embeddedLanguages": {
-          "meta.embedded.block.javascript": "javascript"
-        }
+        "path": "./themes/gas-simple-color-theme.json"
+        
       },
       {
         "label": "GAS Light Colors",
