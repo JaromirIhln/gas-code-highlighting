@@ -7,9 +7,19 @@
   },
   "tokenColors": [
     {
-      "scope": "keyword.control.gas",
+      "scope": [
+        "variable.gas"
+      ],
       "settings": {
-        "foreground": "#007acc",
+        "foreground": "#0070C0" // modrá pro variable
+      }
+    },
+    {
+      "scope": [
+        "identifier.gas"
+      ],
+      "settings": {
+        "foreground": "#228B22", // zelená pro identifier,
         "fontStyle": "bold"
       }
     },
@@ -29,13 +39,14 @@
     {
       "scope": "constant.numeric.gas",
       "settings": {
-        "foreground": "#098658"
+        "foreground": "#6abded"
       }
     },
     {
-      "scope": "variable.other.gas, identifier.gas",
+      "scope": "comment.documentation.gas",
       "settings": {
-        "foreground": "#795e26"
+        "foreground": "#b8860b", // zlatá, nebo jiná barva dle preference
+        "fontStyle": "italic"
       }
     }
   ]

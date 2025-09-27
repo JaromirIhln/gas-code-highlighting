@@ -26,7 +26,11 @@
         "id": "gas",
         "extensions": [".gs"],
         "aliases": ["Google Apps Script", "gas"],
-        "configuration": "./language-configuration.json"
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "images/gas-apps-script.png",
+          "dark": "images/gas-apps-script.png"
+        }
       }
     ],
     "grammars": [
