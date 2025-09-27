@@ -1,5 +1,8 @@
 {
   "name": "gas-syntax-highlighting",
+  "scripts": {
+    "test": "vscode-test"
+  },
   "displayName": "GAS Syntax Highlighting",
   "description": "Zvýraznění syntaxe pro Google Apps Script (.gs) soubory.",
   "version": "0.0.1",
@@ -24,8 +27,13 @@
     "languages": [
       {
         "id": "gas",
-        "extensions": [".gs"],
-        "aliases": ["Google Apps Script", "gas"],
+        "extensions": [
+          ".gs"
+        ],
+        "aliases": [
+          "Google Apps Script",
+          "gas"
+        ],
         "configuration": "./language-configuration.json",
         "icon": {
           "light": "images/gas-apps-script.png",
@@ -38,7 +46,7 @@
         "language": "gas",
         "scopeName": "source.gas",
         "path": "./syntaxes/gas.tmLanguage.json",
-         "embeddedLanguages": {
+        "embeddedLanguages": {
           "meta.embedded.block.javascript": "javascript"
         }
       }
@@ -48,7 +56,6 @@
         "label": "GAS Simple Colors",
         "uiTheme": "vs-dark",
         "path": "./themes/gas-simple-color-theme.json"
-        
       },
       {
         "label": "GAS Light Colors",
@@ -56,5 +63,14 @@
         "path": "./themes/gas-light-color-theme.json"
       }
     ]
+  },
+  "homepage": "https://jaromirihln.github.io/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JaromirIhln/gas-code-highlighting.git"
+  },
+  "devDependencies": {
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
   }
 }

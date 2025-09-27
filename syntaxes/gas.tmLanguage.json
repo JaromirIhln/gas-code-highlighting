@@ -44,6 +44,10 @@
           "name": "comment.block.gas",
           "begin": "/\\*",
           "end": "\\*/"
+        },
+        {
+          "name": "comment.documentation.gas",
+          "match": "/\\*\\*[^]*?\\*/"
         }
       ]
     },

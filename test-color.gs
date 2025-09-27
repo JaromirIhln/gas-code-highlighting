@@ -49,4 +49,11 @@ function vyplnTyden() {
   }
   sheet.getRange("A3:D9").setValues(data);
 }
-gs
+
+function onOpen() {
+  var ui = SpreadsheetApp.getUi();
+  ui.createMenu("Můj Skript")
+    .addItem("Nastav hlavičky", "nastavHlavicky")
+    .addItem("Vyplň týden", "vyplnTyden")
+    .addToUi();
+} 
