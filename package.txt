@@ -1,36 +1,36 @@
 {
-  "name": "gas-syntax-highlighting",
-  "displayName": "GAS Syntax Highlighting",
-  "description": "Zvýraznění syntaxe pro Google Apps Script (.gs) soubory.",
+  "name": "vsix package name",
+  "displayName": "Display name",
+  "description": "Your extension description",
   "version": "0.0.1",
-  "publisher": "tvuj-nick",
+  "publisher": "your-nickname(no spaces - e.g. JaromirIhln)",
   "engines": {
     "vscode": "^1.70.0"
   },
   "categories": [
-    "Programming Languages"
+    "Your extension category"
   ],
   "contributes": {
     "languages": [
       {
-        "id": "gas",
-        "aliases": ["Google Apps Script", "gas"],
-        "extensions": [".gs"],
+        "id": "language id",
+        "aliases": ["Language Alias", "Alias"],
+        "extensions": [".[your file extension]"],
         "configuration": "./language-configuration.json"
       }
     ],
     "grammars": [
       {
-        "language": "gas",
-        "scopeName": "source.gas",
-        "path": "./syntaxes/gas.tmLanguage.json"
+        "language": "some language",
+        "scopeName": "source.[your scope name]",
+        "path": "./syntaxes/[your file name].tmLanguage.json"
       }
     ],
     "themes": [
       {
-        "label": "GAS Simple Colors",
+        "label": "Your Theme Name",
         "uiTheme": "vs-dark",
-        "path": "./themes/gas-simple-color-theme.json"
+        "path": "./themes/[your file name]-simple-color-theme.json"
       }
     ]
   }

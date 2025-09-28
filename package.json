@@ -1,12 +1,12 @@
 {
   "name": "gas-syntax-highlighting",
+  "version": "0.0.1",
   "scripts": {
     "test": "vscode-test"
   },
-  "displayName": "GAS Syntax Highlighting",
+  "displayName": "Apps Script Syntax Colors (gas) by Jaromir Ihln",
   "description": "Zvýraznění syntaxe pro Google Apps Script (.gs) soubory.",
-  "version": "0.0.1",
-  "publisher": "Jaromír Ihln",
+  "publisher": "JaromrIhln",
   "author": {
     "name": "Jaromír Ihln"
   },
@@ -23,6 +23,9 @@
     "vscode": "^1.70.0"
   },
   "main": "./extension.js",
+  "activationEvents": [
+    "onLanguage:gas"
+  ],
   "contributes": {
     "languages": [
       {
@@ -64,7 +67,7 @@
       }
     ]
   },
-  "homepage": "https://jaromirihln.github.io/",
+  "homepage": "https://jiwebmaster.cz/",
   "repository": {
     "type": "git",
     "url": "https://github.com/JaromirIhln/gas-code-highlighting.git"

@@ -1,0 +1,8 @@
+# Ignoruj VSIX balíčky
+*.vsix
+
+# Další běžné ignorované soubory
+node_modules/
+dist/
+.vscode/
+.env
