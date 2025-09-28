@@ -6,7 +6,7 @@
     { "include": "#strings" },
     { "include": "#comments" },
     { "include": "#numbers" },
-    { "include": "#identifiers" }
+  { "include": "#identifier" }
   ],
   "repository": {
     "keywords": {
@@ -59,7 +59,7 @@
         }
       ]
     },
-    "identifiers": {
+    "identifier": {
       "patterns": [
         {
           "name": "variable.other.gas",
