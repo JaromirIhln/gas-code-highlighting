@@ -49,7 +49,7 @@ function vyplnTyden() {
   }
   sheet.getRange("A3:D9").setValues(data);
 }
-
+/*Víceřádkový komentář je také funkční*/
 function onOpen() {
   var ui = SpreadsheetApp.getUi();
   ui.createMenu("Můj Skript")

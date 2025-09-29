@@ -6,7 +6,9 @@
     { "include": "#strings" },
     { "include": "#comments" },
     { "include": "#numbers" },
-  { "include": "#identifiers" }
+    { "include": "#gas-api" },
+    { "include": "#methods" },
+    { "include": "#identifiers" }
   ],
   "repository": {
     "keywords": {
@@ -59,7 +61,23 @@
         }
       ]
     },
-    "identifier": {
+    "gas-api": {
+      "patterns": [
+        {
+          "name": "support.class.gas",
+          "match": "\\b(SpreadsheetApp|DriveApp|DocumentApp|SlidesApp|FormsApp|GmailApp|CalendarApp|ScriptApp|Utilities|Session|Logger|PropertiesService|LockService|CacheService|HtmlService|UrlFetchApp|XmlService|Blob|ContentService|CardService|AdminDirectory|AdminReports)\\b"
+        }
+      ]
+    },
+    "methods": {
+      "patterns": [
+        {
+          "name": "entity.name.function.gas",
+          "match": "\\b(getActiveSpreadsheet|getActiveSheet|getRange|setValues|getValues|setValue|getValue|getActiveCell|getLastRow|getLastColumn|insertRows|insertColumns|deleteRows|deleteColumns|setBackgroundColor|setFontColor|setBorder|getUi|createMenu|addItem|addToUi|toast|alert|getActiveUser|getEffectiveUser|getTemporaryActiveUserKey|newTrigger|deleteTrigger|ScriptApp|onOpen|onEdit|onInstall|doGet|doPost)\\b"
+        }
+      ]
+    },
+    "identifiers": {
       "patterns": [
         {
           "name": "variable.other.gas",

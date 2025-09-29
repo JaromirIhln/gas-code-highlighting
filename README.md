@@ -8,6 +8,34 @@
 
  Rozšíření pro Visual Studio Code, které přináší zvýraznění syntaxe a snippety pro Google Apps Script (.gs) soubory. Ideální pro vývojáře, kteří chtějí pohodlně psát a upravovat GAS skripty přímo v VS Code.
 
+## 🆕 Co je nového v verzi 0.2.5 - What’s New in Version 0.2.5
+
+> **English:**
+> Enhanced syntax highlighting
+> : 7 color types instead of 4 (keywords, strings, numbers, comments, Google Apps Script API objects, methods, variables)
+>> **9 new snippets added**
+: Gmail operations, Google Drive file management, Calendar events, advanced logging, triggers, UI menus, data filtering and sorting
+> **Total of 16 snippets** for comprehensive Google Apps Script development
+> **Improved Google Apps Script API support**: SpreadsheetApp, DriveApp, GmailApp, CalendarApp, FormApp, ScriptApp recognition
+
+- **Vylepšené zvýraznění syntaxe**: 7 typů barev místo 4 (klíčová slova, řetězce, čísla, komentáře, Google Apps Script API objekty, metody, proměnné)
+- **9 nových snippetů**: Gmail operace, správa souborů na Google Drive, události v kalendáři, pokročilé logování, triggery, UI menu, filtrování a řazení dat
+- **Celkem 16 snippetů** pro kompletní vývoj v Google Apps Script
+- **Lepší podpora Google Apps Script API**: rozpoznávání SpreadsheetApp, DriveApp, GmailApp, CalendarApp, FormApp, ScriptApp
+
+### Nové snippety
+
+- `gsmail` - poslání emailu
+- `gsmailatt` - email s přílohou
+- `gsdrive` - práce se soubory na Drive
+- `gsfolder` - vytvoření složky na Drive
+- `gscal` - vytvoření události v kalendáři
+- `gslog` - strukturované logování
+- `gstrigger` - nastavení časového triggeru
+- `gsui` - pokročilé UI menu s emojis
+- `gsfilter` - filtrování dat
+- `gssort` - řazení dat podle více kritérií
+
 ## Funkce
 
 > **English:**
@@ -71,7 +99,7 @@
 > **English:**
 > Here you will find examples of GAS projects using this extension, including instructions for installing 'clasp' to work with Google Apps Script in VS Code.
 
-<span style="color: lightblue; font-weight: bold;">
+<span style="color: #2563eb; font-weight: bold; font-size: 1.1em;">
 Zde najdeš ukázky GAS projektů s využitím tohoto rozšíření, včetně popisu instalace 'clasp' pro práci s Google Apps Script ve VS Code.</span>
 
 >Najdeš zde i přiklad souboru `package.json` pro vytvoření vlastního rozšíření pro VS Code, které zvýrazní syntaxi pro jiný jazyk. Stačí nahradit názvy, přípony a cesty k souborům podle potřeby.(`package.txt`)
@@ -81,3 +109,5 @@ Zde najdeš ukázky GAS projektů s využitím tohoto rozšíření, včetně po
 MIT
 
 Připomínky a vylepšení vítány!
+**English:**
+Feedback and improvements are welcome!
