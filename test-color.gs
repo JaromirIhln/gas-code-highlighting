@@ -56,4 +56,4 @@ function onOpen() {
     .addItem("Nastav hlavičky", "nastavHlavicky")
     .addItem("Vyplň týden", "vyplnTyden")
     .addToUi();
-} 
+}

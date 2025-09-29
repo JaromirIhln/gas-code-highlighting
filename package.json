@@ -1,6 +1,6 @@
 {
   "name": "gas-syntax-highlighting",
-  "version": "0.1.3",
+  "version": "0.2.3",
   "scripts": {
     "test": "vscode-test"
   },
@@ -64,6 +64,12 @@
         "label": "GAS Light Colors",
         "uiTheme": "vs",
         "path": "./themes/gas-light-color-theme.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "gas",
+        "path": "./.vscode/jaromirihln.google-gas.code-snippets"
       }
     ]
   },
