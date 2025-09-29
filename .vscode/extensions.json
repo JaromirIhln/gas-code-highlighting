@@ -4,8 +4,7 @@
 
 	// List of extensions which should be recommended for users of this workspace.
 	"recommendations": [
-		"jaromirihln.gas-syntax-highlighting",
-		"jaromirihln.google-gas-code-snippets"
+	"JaromrIhln.gas-syntax-highlighting"
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
 	"unwantedRecommendations": [
