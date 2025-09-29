@@ -16,7 +16,7 @@
 > .gs file icon in explorer
 > Automatic language detection
 > Snippets for quick code insertion
-> Easy installation (VSIX, Marketplace, manually) 
+> Easy installation (VSIX, Marketplace, manually)
 
 - Zvýraznění syntaxe pro .gs soubory (Google Apps Script)
 - Podpora světlého i tmavého motivu
@@ -25,9 +25,10 @@
 - Snippety pro rychlé vkládání kódu
 - Jednoduchá instalace (VSIX, Marketplace, ručně)
 
-## Snippety - Code Examples
+## Příklady kódu - Snippets
 
-> **English:**The extension includes a set of snippets for quickly inserting typical GAS constructs. Just start typing `gs` and VS Code will offer available snippets, e.g.:
+> **English:**
+> The extension includes a set of snippets for quickly inserting typical GAS constructs. Just start typing `gs` and VS Code will offer available snippets, e.g.:
 >
 > - `gshello` – "Hello World" function
 > - `gscolor` – set background color
@@ -67,7 +68,8 @@
 
 - [GitHub repozitář](https://github.com/JaromirIhl/start_g_appscript/)
 
-> **English:** Here you will find examples of GAS projects using this extension, including instructions for installing 'clasp' to work with Google Apps Script in VS Code.
+> **English:**
+> Here you will find examples of GAS projects using this extension, including instructions for installing 'clasp' to work with Google Apps Script in VS Code.
 
 <span style="color: lightblue; font-weight: bold;">
 Zde najdeš ukázky GAS projektů s využitím tohoto rozšíření, včetně popisu instalace 'clasp' pro práci s Google Apps Script ve VS Code.</span>
