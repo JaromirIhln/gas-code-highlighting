@@ -6,7 +6,7 @@
     { "include": "#strings" },
     { "include": "#comments" },
     { "include": "#numbers" },
-  { "include": "#identifier" }
+  { "include": "#identifiers" }
   ],
   "repository": {
     "keywords": {
