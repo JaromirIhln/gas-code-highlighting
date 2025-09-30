@@ -353,9 +353,10 @@
     "prefix": "gsmanifest",
     "body": [
       "/**",
-      " *❗Upravení appsscript.json manifest s Gmail oprávněními pro posílání emailů.",
+      " *❗Upravení appsscript.json manifest s Gmail oprávněními pro posílání emailů ",
       " * a další běžná oprávnění nutná pro tyto úryvky kódů.poznámka: Nezapomeň změnit timeZone na tvou aktuální zónu.",
       " * poznámka: Nezapomeň změnit timeZone na tvou aktuální zónu. Defaultně je 'America/New_York'. ",
+      " * -❗zkopíruj do souboru appsscript.json. - další informace o manifestu: https://developers.google.com/apps-script/manifest",
       " */",
       "{",
       "  \"timeZone\": \"Europe/Prague\",",

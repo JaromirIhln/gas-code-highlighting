@@ -13,11 +13,13 @@
 > **English:**
 > All snippets and features listed below are fixed in this version 0.3.5.
 > All snippets and functions listed below are fixed in this version, including two new snippets.
+> Some snippets require editing the `appsscript.json` manifest to add the necessary permissions. Use the `gsmanifest` snippet to include a basic manifest with common permissions - see instructions below.
 > `gsmanifest` - contains a basic modification of the `appscript.json` file to provide the necessary permissions to run scripts such as `gsmail`
-> `gstrigger` - newly gs-timeTrigger, gscal - newly gscalendar-event.
+> `gstrigger` - newly `gs-timeTrigger`, `gscalendar-event`.
 > `gsimportant` - Inserts a comment with an exclamation mark icon to mark important parts of the code.
 
 - Všechny níže uvedené úryvky a funkce jsou v této verzi opraveny včetně dvou nových úryvků.
+- Některé snippety vyžadují úpravu `appsscript.json` manifestu pro přidání potřebných oprávnění. Použij snippet `gsmanifest` pro vložení základního manifestu s běžnými oprávněními  - návod viz níže.
 - `gsmanifest` - obsahuje základní úpravu souboru appscript.json o potřebná oprávnění ke spuštění scriptů jako je např. gsmail
 - `gstrigger` - nově gs-timeTrigger, gscal - nově gscalendar-event.
 - `gsimportant` - Vloží komentář s ikonkou vykřičníku pro označení důležitých částí kódu.
@@ -35,8 +37,14 @@
 - `gsfilter` - filtrování dat - filtering data
 - `gssort` - řazení dat podle více kritérií - sorting data by multiple criteria
 **English:❗Important**
-Some snippets require modification of the `appsscript.json` manifest to add necessary permissions. Use the `gsmanifest` snippet to insert a basic manifest with common permissions.
-**❗ Upozornění:** Některé snippety vyžadují úpravu `appsscript.json` manifestu pro přidání potřebných oprávnění. Použij snippet `gsmanifest` pro vložení základního manifestu s běžnými oprávněními.
+
+ > [!CAUTION]
+ ***Some snippets require modification of the `appsscript.json` manifest to add necessary permissions. Use the `gsmanifest` snippet to insert a basic manifest with common permissions - snippet for inserting a basic manifest with normal permissions - only works with .gs file - then copy the contents and replace the existing file contents with this in appscript.json- this modification will make snippets that require higher permissions fully functional.***
+
+**❗ Upozornění:**
+
+> [!CAUTION]
+***Některé úryvky kódu vyžadují úpravu manifestu `appsscript.json` pro přidání potřebných oprávnění. Použijte úryvek `gsmanifest` pro vložení základního manifestu s běžnými oprávněními - úryvek pro vložení základního manifestu s normálními oprávněními - funguje pouze se souborem .gs - poté zkopírujte obsah úryvku a nahraďte stávající obsah souboru tímto v `appscript.json` - tato úprava zajistí, že úryvky kódu, které vyžadují vyšší oprávnění, budou plně funkční.***
 
 ## Funkce
 
@@ -101,15 +109,16 @@ Some snippets require modification of the `appsscript.json` manifest to add nece
 > **English:**
 > Here you will find examples of GAS projects using this extension, including instructions for installing 'clasp' to work with Google Apps Script in VS Code.
 
-<span style="color: #2563eb; font-weight: bold; font-size: 1.1em;">
-Zde najdeš ukázky GAS projektů s využitím tohoto rozšíření, včetně popisu instalace 'clasp' pro práci s Google Apps Script ve VS Code.</span>
+- > [!NOTE]
+  Zde najdeš ukázky GAS projektů s využitím tohoto rozšíření, včetně popisu instalace 'clasp' pro práci s Google Apps Script ve VS Code.
 
->Najdeš zde i přiklad souboru `package.json` pro vytvoření vlastního rozšíření pro VS Code, které zvýrazní syntaxi pro jiný jazyk. Stačí nahradit názvy, přípony a cesty k souborům podle potřeby.(`package.txt`)
+- > [!NOTE]
+Najdeš zde i přiklad souboru `package.json` pro vytvoření vlastního rozšíření pro VS Code, které zvýrazní syntaxi pro jiný jazyk. Stačí nahradit názvy, přípony a cesty k souborům podle potřeby.(`package.txt`)
 
 ## Licence
 
 MIT
-
+> [!TIP]
 Připomínky a vylepšení vítány!
 **English:**
 Feedback and improvements are welcome!
