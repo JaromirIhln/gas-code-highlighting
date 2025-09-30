@@ -8,33 +8,35 @@
 
  Rozšíření pro Visual Studio Code, které přináší zvýraznění syntaxe a snippety pro Google Apps Script (.gs) soubory. Ideální pro vývojáře, kteří chtějí pohodlně psát a upravovat GAS skripty přímo v VS Code.
 
-## 🆕 Co je nového v verzi 0.2.5 - What’s New in Version 0.2.5
+## 🆕 Co je nového v verzi 0.3.5 - What’s New in Version 0.3.5
 
 > **English:**
-> Enhanced syntax highlighting
-> : 7 color types instead of 4 (keywords, strings, numbers, comments, Google Apps Script API objects, methods, variables)
->> **9 new snippets added**
-: Gmail operations, Google Drive file management, Calendar events, advanced logging, triggers, UI menus, data filtering and sorting
-> **Total of 16 snippets** for comprehensive Google Apps Script development
-> **Improved Google Apps Script API support**: SpreadsheetApp, DriveApp, GmailApp, CalendarApp, FormApp, ScriptApp recognition
+> All snippets and features listed below are fixed in this version 0.3.5.
+> All snippets and functions listed below are fixed in this version, including two new snippets.
+> `gsmanifest` - contains a basic modification of the `appscript.json` file to provide the necessary permissions to run scripts such as `gsmail`
+> `gstrigger` - newly gs-timeTrigger, gscal - newly gscalendar-event.
+> `gsimportant` - Inserts a comment with an exclamation mark icon to mark important parts of the code.
 
-- **Vylepšené zvýraznění syntaxe**: 7 typů barev místo 4 (klíčová slova, řetězce, čísla, komentáře, Google Apps Script API objekty, metody, proměnné)
-- **9 nových snippetů**: Gmail operace, správa souborů na Google Drive, události v kalendáři, pokročilé logování, triggery, UI menu, filtrování a řazení dat
-- **Celkem 16 snippetů** pro kompletní vývoj v Google Apps Script
-- **Lepší podpora Google Apps Script API**: rozpoznávání SpreadsheetApp, DriveApp, GmailApp, CalendarApp, FormApp, ScriptApp
+- Všechny níže uvedené úryvky a funkce jsou v této verzi opraveny včetně dvou nových úryvků.
+- `gsmanifest` - obsahuje základní úpravu souboru appscript.json o potřebná oprávnění ke spuštění scriptů jako je např. gsmail
+- `gstrigger` - nově gs-timeTrigger, gscal - nově gscalendar-event.
+- `gsimportant` - Vloží komentář s ikonkou vykřičníku pro označení důležitých částí kódu.
 
-### Nové snippety
+### Nové snippety - New Snippets
 
-- `gsmail` - poslání emailu
-- `gsmailatt` - email s přílohou
-- `gsdrive` - práce se soubory na Drive
-- `gsfolder` - vytvoření složky na Drive
-- `gscal` - vytvoření události v kalendáři
-- `gslog` - strukturované logování
-- `gstrigger` - nastavení časového triggeru
-- `gsui` - pokročilé UI menu s emojis
-- `gsfilter` - filtrování dat
-- `gssort` - řazení dat podle více kritérií
+- `gsmail` - poslání emailu - send email
+- `gsmailatt` - email s přílohou - email with attachment
+- `gsdrive` - práce se soubory na Drive - working with Drive files
+- `gsfolder` - vytvoření složky na Drive - creating a folder on Drive
+- `gscalendar-event` - vytvoření události v kalendáři - creating a calendar event
+- `gslog` - strukturované logování - structured logging
+- `gs-timeTrigger` - nastavení časového triggeru - setting a time trigger
+- `gsui-customMenu` - pokročilé UI menu s emojis - advanced UI menu with emojis
+- `gsfilter` - filtrování dat - filtering data
+- `gssort` - řazení dat podle více kritérií - sorting data by multiple criteria
+**English:❗Important**
+Some snippets require modification of the `appsscript.json` manifest to add necessary permissions. Use the `gsmanifest` snippet to insert a basic manifest with common permissions.
+**❗ Upozornění:** Některé snippety vyžadují úpravu `appsscript.json` manifestu pro přidání potřebných oprávnění. Použij snippet `gsmanifest` pro vložení základního manifestu s běžnými oprávněními.
 
 ## Funkce
 

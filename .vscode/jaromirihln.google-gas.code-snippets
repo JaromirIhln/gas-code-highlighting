@@ -2,6 +2,9 @@
   "gs-helloSvete": {
     "prefix": "gshello",
     "body": [
+      "/**",
+      " * Vloží funkci, která zapíše 'Ahoj, Svete!' do A1.",
+      " */",
       "function ahojSvete() {",
       "  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();",
       "  sheet.getRange(\"A1\").setValue(\"Ahoj, Svete!\");",
@@ -12,6 +15,9 @@
   "gs-barvaPozadi": {
     "prefix": "gsbarva",
     "body": [
+      "/**",
+      " * Vloží funkci pro nastavení barvy pozadí buňky A1 na žlutou.",
+      " */",
       "function nastavBarvuPozadi() {",
       "  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();",
       "  sheet.getRange(\"A1\").setBackground(\"#FFFF00\"); // Žlutá barva",
@@ -22,6 +28,9 @@
   "gs-vypisDatum": {
     "prefix": "gsdatum",
     "body": [
+      "/**",
+      " * Vloží funkci pro zapsání aktuálního data do B1.",
+      " */",
       "function vypisAktualniDatum() {",
       "  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();",
       "  var dnes = new Date();",
@@ -33,6 +42,9 @@
   "gs-zarovnejText": {
     "prefix": "gszarovnej",
     "body": [
+      "/**",
+      " * Vloží funkci pro zarovnání textu v A1:B1 na střed.",
+      " */",
       "function zarovnejTextNaStred() {",
       "  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();",
       "  sheet.getRange(\"A1:B1\").setHorizontalAlignment(\"center\");",
@@ -43,6 +55,9 @@
   "gs-nastavHlavicky": {
     "prefix": "gshlavicky",
     "body": [
+      "/**",
+      " * Vloží funkci pro nastavení hlaviček v A2:D2.",
+      " */",
       "function nastavHlavicky() {",
       "  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();",
       "  var hlavicky = [[\"Den v týdnu\", \"Datum\", \"poznámka\", \"svátek\"]];",
@@ -54,6 +69,10 @@
   "gs-vyplnTyden": {
     "prefix": "gstyden",
     "body": [
+      "/**",
+      " * Vloží funkci pro vyplnění týdne v tabulce s daty od 24.9.2025",
+      " * včetně dne v týdnu, poznámky a svátku.",
+      " */",
       "function vyplnTyden() {",
       "  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();",
       "  var startDate = new Date(2025, 9, 24); // 9 = říjen (0-indexované, září je 8)",
@@ -91,26 +110,33 @@
   "Vytvoř Google Formulář": {
     "prefix": "gsform",
     "body": [
+      "/**",
+      " * Vytvoří nový Google Formulář.",
+      " */",
       "function vytvorFormular() {",
       "  var form = FormApp.create('Nový formulář');",
       "  form.addTextItem().setTitle('Jméno');",
       "  form.addMultipleChoiceItem()",
       "      .setTitle('Vyberte možnost')",
       "      .setChoiceValues(['A', 'B', 'C']);",
-      "  Logger.log('Formulář vytvořen: ' + form.getPublishedUrl());",
+      "  Logger.log('📝 Formulář vytvořen: ' + form.getPublishedUrl());",
       "}"
     ],
-    "description": "Vytvoří nový Google Formulář s jedním textovým a jedním výběrovým polem."
+    "description": "📝Vytvoří nový Google Formulář s jedním textovým a jedním výběrovým polem."
   },
   "gs-posliEmail": {
     "prefix": "gsmail",
     "body": [
+      "/**",
+      " * Vloží funkci pro odeslání emailu.",
+      " */",
       "function posliEmail() {",
+      " //⚡ Změň na skutečnou emailovou adresu - ale i tak dorazí zpráva'adresa nebyla nalezena'",
       "  var adresat = 'priklad@email.com';",
       "  var predmet = 'Zpráva z Google Apps Script';",
       "  var zprava = 'Ahoj,\\n\\nToto je automatická zpráva.\\n\\nS pozdravem';",
       "  GmailApp.sendEmail(adresat, predmet, zprava);",
-      "  Logger.log('Email odeslán na: ' + adresat);",
+      "  Logger.log('📬Email odeslán na: ' + adresat + ' 🕵️‍♀️');",
       "}"
     ],
     "description": "Pošle email pomocí GmailApp."
@@ -118,15 +144,18 @@
   "gs-emailSPrilohou": {
     "prefix": "gsmailatt",
     "body": [
+      "/**",
+      " * Pošle email s přílohou ze souboru na Google Drive.",
+      " */",
       "function posliEmailSPrilohou() {",
-      "  var adresat = 'priklad@email.com';",
+      "  var adresat = 'priklad@email.com';// Změň na skutečnou emailovou adresu",
       "  var predmet = 'Email s přílohou';",
       "  var zprava = 'V příloze najdeš soubor z Google Drive.';",
-      "  var soubor = DriveApp.getFileById('ID_SOUBORU_NA_DRIVE');",
+      "  var soubor = DriveApp.getFileById('ID_SOUBORU_NA_DRIVE');//Je zapotřebí skutečné ID, které získáte funkcí 'praceSeSouboryNaDrive'",
       "  GmailApp.sendEmail(adresat, predmet, zprava, {",
       "    attachments: [soubor.getBlob()]",
       "  });",
-      "  Logger.log('Email s přílohou odeslán.');",
+      "  Logger.log('📩📎 Email s přílohou odeslán.📝');",
       "}"
     ],
     "description": "Pošle email s přílohou ze souboru na Google Drive."
@@ -134,33 +163,47 @@
   "gs-praceSeSoubory": {
     "prefix": "gsdrive",
     "body": [
+      "/**",
+      " * Projde všechny soubory ve složce na Google Drive. Defaultně root složka,",
+      " * pokud chceš procházet jinou složku, nahraď 'getFolderById(ID_SLOZKY)' skutečným ID složky",
+      " * které jsi získal ve výpisu.",
+      " */",
       "function praceSeSouboryNaDrive() {",
-      "  var slozka = DriveApp.getFolderById('ID_SLOZKY');",
+      "  // Použij root složku, toto ti vypíše ID všech souborů, nahraď",
+      "  // 'getRootFolder() - getFolderById(ID_SLOZKY)' skutečné ID",
+      "  // která jsi právě získal ve výpisu",
+      "  var slozka = DriveApp.getRootFolder(); // nebo DriveApp.getFolderById('váš_skutečný_folder_id');",
       "  var soubory = slozka.getFiles();",
       "  ",
       "  while (soubory.hasNext()) {",
       "    var soubor = soubory.next();",
-      "    Logger.log('Název: ' + soubor.getName() + ', ID: ' + soubor.getId());",
+      "    Logger.log('🕵️‍♀️ Název: ' + soubor.getName() + ', ID: ' + soubor.getId());",
       "  }",
       "}"
     ],
-    "description": "Projde všechny soubory ve složce na Google Drive."
+    "description": "Projde všechny soubory ve složce na Google Drive. Defaultně root složka."
   },
   "gs-vytvorSlozku": {
     "prefix": "gsfolder",
     "body": [
+      "/**",
+      " * Vytvoří novou složku na Google Drive s aktuálním datem.",
+      " */",
       "function vytvorSlozku() {",
       "  var nazevSlozky = 'Nová složka ' + new Date().toLocaleDateString();",
       "  var novaSlozka = DriveApp.createFolder(nazevSlozky);",
       "  Logger.log('Složka vytvořena: ' + novaSlozka.getName());",
-      "  Logger.log('ID složky: ' + novaSlozka.getId());",
+      "  Logger.log('📂ID složky: ' + novaSlozka.getId());",
       "}"
     ],
     "description": "Vytvoří novou složku na Google Drive s aktuálním datem."
   },
   "gs-udalostKalendar": {
-    "prefix": "gscal",
+    "prefix": "gscalendar-event",
     "body": [
+      "/**",
+      " * Vytvoří novou událost v Google Kalendáři.",
+      " */",
       "function vytvorUdalost() {",
       "  var kalendar = CalendarApp.getDefaultCalendar();",
       "  var nazev = 'Schůzka z Apps Script';",
@@ -172,14 +215,17 @@
       "    description: 'Událost vytvořená pomocí Google Apps Script',",
       "    location: 'Online'",
       "  });",
-      "  Logger.log('Událost vytvořena: ' + nazev);",
+      "  Logger.log('⚡🗓️Událost vytvořena: ' + nazev);",
       "}"
     ],
-    "description": "Vytvoří novou událost v Google Kalendáři."
+    "description": "🗓️ Vytvoří novou ⚡událost v Google Kalendáři."
   },
   "gs-logovani": {
     "prefix": "gslog",
     "body": [
+      "/**",
+      " * Podrobné logování s časem a formátováním.",
+      " */",
       "function podrobneLogovani() {",
       "  var cas = new Date().toLocaleString();",
       "  var zprava = 'Důležitá informace';",
@@ -191,11 +237,14 @@
       "  Logger.log('========================');",
       "}"
     ],
-    "description": "Strukturované logování s časem a formátováním."
+    "description": "📝 Strukturované logování s časem a formátováním."
   },
   "gs-casovyTrigger": {
-    "prefix": "gstrigger",
+    "prefix": "gs-timeTrigger",
     "body": [
+      "/**",
+      " * Nastaví časový trigger pro pravidelné spouštění funkce.",
+      " */",
       "function nastavCasovyTrigger() {",
       "  // Smaže staré triggery pro tuto funkci",
       "  var triggery = ScriptApp.getProjectTriggers();",
@@ -216,14 +265,17 @@
       "}",
       "",
       "function pravidelnaFunkce() {",
-      "  Logger.log('Pravidelná funkce spuštěna: ' + new Date());",
+      "  Logger.log('⏰ Pravidelná funkce spuštěna: ' + new Date());",
       "}"
     ],
     "description": "Nastaví časový trigger pro pravidelné spouštění funkce."
   },
   "gs-menuUI": {
-    "prefix": "gsui",
+    "prefix": "gsui-customMenu",
     "body": [
+      "/**",
+      " * Vytvoří vlastní menu v uživatelském rozhraní včetně ikonek.",
+      " */",
       "function vytvorCustomMenu() {",
       "  var ui = SpreadsheetApp.getUi();",
       "  ui.createMenu('🚀 Moje Nástroje')",
@@ -237,11 +289,11 @@
       "}",
       "",
       "function analyzujData() {",
-      "  SpreadsheetApp.getUi().alert('Analýza dat spuštěna!');",
+      "  SpreadsheetApp.getActiveSpreadsheet().toast('Analýza dat spuštěna!');",
       "}",
       "",
       "function posliReport() {",
-      "  SpreadsheetApp.getUi().alert('Report odeslán!');",
+      "  SpreadsheetApp.getActiveSpreadsheet().toast('Report odeslán!');",
       "}"
     ],
     "description": "Vytvoří pokročilé uživatelské menu s submenu a emojis."
@@ -249,6 +301,9 @@
   "gs-filtrData": {
     "prefix": "gsfilter",
     "body": [
+      "/**",
+      " * Filtruje data podle kritéria a vytvoří nový list s výsledky.",
+      " */",
       "function filtrujData() {",
       "  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();",
       "  var data = sheet.getDataRange().getValues();",
@@ -276,6 +331,9 @@
   "gs-seradData": {
     "prefix": "gssort",
     "body": [
+      "/**",
+      " * Seřadí data podle více sloupců s možností vzestupného/sestupného řazení.",
+      " */",
       "function seradData() {",
       "  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();",
       "  var rozsah = sheet.getDataRange();",
@@ -286,9 +344,48 @@
       "    {column: 2, ascending: false}   // Sloupec B sestupně",
       "  ]);",
       "  ",
-      "  SpreadsheetApp.getUi().toast('Data seřazena!', 'Hotovo', 3);",
+      "  SpreadsheetApp.getActiveSpreadsheet().toast('Data seřazena!', 'Hotovo', 3);",
       "}"
     ],
     "description": "Seřadí data podle více sloupců s možností vzestupného/sestupného řazení."
+  },
+  "gs-appsscriptManifest": {
+    "prefix": "gsmanifest",
+    "body": [
+      "/**",
+      " *❗Upravení appsscript.json manifest s Gmail oprávněními pro posílání emailů.",
+      " * a další běžná oprávnění nutná pro tyto úryvky kódů.poznámka: Nezapomeň změnit timeZone na tvou aktuální zónu.",
+      " * poznámka: Nezapomeň změnit timeZone na tvou aktuální zónu. Defaultně je 'America/New_York'. ",
+      " */",
+      "{",
+      "  \"timeZone\": \"Europe/Prague\",",
+      "  \"dependencies\": {",
+      "    \"enabledAdvancedServices\": []",
+      "  },",
+      "  \"oauthScopes\": [",
+      "    \"https://www.googleapis.com/auth/spreadsheets\",",
+      "    \"https://www.googleapis.com/auth/drive\",",
+      "    \"https://www.googleapis.com/auth/gmail.send\",",
+      "    \"https://www.googleapis.com/auth/calendar\",",
+      "    \"https://www.google.com/calendar/feeds\"",
+      "    \"https://www.googleapis.com/auth/drive.file\"",
+      "  ],",
+      "  \"exceptionLogging\": \"STACKDRIVER\",",
+      "  \"runtimeVersion\": \"V8\"",
+      "}"
+    ],
+    "description": "Vytvoří appsscript.json manifest s Gmail oprávněními pro posílání emailů."
+  },
+  "gs-important": {
+    "prefix": "gsimportant",
+    "body": [
+      "/**",
+      " * ❗ DŮLEŽITÉ: ${1:Popis důležité informace}",
+      " * ",
+      " * ${2:Detailní vysvětlení proč je to důležité}",
+      " */",
+      "${3:// Zde pokračuj s kódem}"
+    ],
+    "description": "Vloží komentář s ikonkou vykřičníku pro označení důležitých částí kódu."
   }
 }
