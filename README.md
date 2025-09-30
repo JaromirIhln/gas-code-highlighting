@@ -100,11 +100,11 @@
 ## Odkazy - Links
 
 - [GitHub repozitář](https://github.com/JaromirIhln/gas-code-highlighting)
-- [Marketplace stránka](https://marketplace.visualstudio.com/)
+- [Marketplace stránka](https://marketplace.visualstudio.com/items?itemName=JaromrIhln.gas-syntax-highlighting)
 
 ## Příklady použití - Examples of Use
 
-- [GitHub repozitář](https://github.com/JaromirIhl/start_g_appscript/)
+- [GitHub repozitář](https://github.com/JaromirIhln/start_g_appscript)
 
 > **English:**
 > Here you will find examples of GAS projects using this extension, including instructions for installing 'clasp' to work with Google Apps Script in VS Code.
