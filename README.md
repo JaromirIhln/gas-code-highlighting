@@ -8,10 +8,10 @@
 
  Rozšíření pro Visual Studio Code, které přináší zvýraznění syntaxe a snippety pro Google Apps Script (.gs) soubory. Ideální pro vývojáře, kteří chtějí pohodlně psát a upravovat GAS skripty přímo v VS Code.
 
-## 🆕 Co je nového v verzi 0.3.5 - What’s New in Version 0.3.5
+## 🆕 Co je nového v verzi 0.3.6 - What’s New in Version 0.3.6
 
 > **English:**
-> All snippets and features listed below are fixed in this version 0.3.5.
+> All snippets and features listed below are fixed in this version 0.3.6.
 > All snippets and functions listed below are fixed in this version, including two new snippets.
 > Some snippets require editing the `appsscript.json` manifest to add the necessary permissions. Use the `gsmanifest` snippet to include a basic manifest with common permissions - see instructions below.
 > `gsmanifest` - contains a basic modification of the `appscript.json` file to provide the necessary permissions to run scripts such as `gsmail`
