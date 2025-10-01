@@ -45,7 +45,7 @@ function vyplnTyden() {
     var datum = new Date(startDate);
     datum.setDate(startDate.getDate() + i);
     var denVTydnu = dny[i];
-    data.push([denVTydnu, datum, notes[i], holiday[i]]);
+    data.push([denVTydnu, datum, note s[i], holiday[i]]);
   }
   sheet.getRange("A3:D9").setValues(data);
 }

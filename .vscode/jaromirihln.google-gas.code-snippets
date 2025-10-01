@@ -13,7 +13,7 @@
     "description": "Vloží funkci, která zapíše 'Ahoj, Svete!' do A1."
   },
   "gs-barvaPozadi": {
-    "prefix": "gsbarva",
+    "prefix": "gscolor",
     "body": [
       "/**",
       " * Vloží funkci pro nastavení barvy pozadí buňky A1 na žlutou.",
@@ -26,7 +26,7 @@
     "description": "Vloží funkci pro nastavení barvy pozadí buňky A1 na žlutou."
   },
   "gs-vypisDatum": {
-    "prefix": "gsdatum",
+    "prefix": "gsdate",
     "body": [
       "/**",
       " * Vloží funkci pro zapsání aktuálního data do B1.",
@@ -40,7 +40,7 @@
     "description": "Vloží funkci pro zapsání aktuálního data do B1."
   },
   "gs-zarovnejText": {
-    "prefix": "gszarovnej",
+    "prefix": "gsalign",
     "body": [
       "/**",
       " * Vloží funkci pro zarovnání textu v A1:B1 na střed.",
@@ -53,7 +53,7 @@
     "description": "Vloží funkci pro zarovnání textu v A1:B1 na střed."
   },
   "gs-nastavHlavicky": {
-    "prefix": "gshlavicky",
+    "prefix": "gsheading",
     "body": [
       "/**",
       " * Vloží funkci pro nastavení hlaviček v A2:D2.",
@@ -67,7 +67,7 @@
     "description": "Vloží funkci pro nastavení hlaviček v A2:D2."
   },
   "gs-vyplnTyden": {
-    "prefix": "gstyden",
+    "prefix": "gsweek",
     "body": [
       "/**",
       " * Vloží funkci pro vyplnění týdne v tabulce s daty od 24.9.2025",
@@ -142,7 +142,7 @@
     "description": "Pošle email pomocí GmailApp."
   },
   "gs-emailSPrilohou": {
-    "prefix": "gsmailatt",
+    "prefix": "gsmail-attachment",
     "body": [
       "/**",
       " * Pošle email s přílohou ze souboru na Google Drive.",
@@ -388,5 +388,175 @@
       "${3:// Zde pokračuj s kódem}"
     ],
     "description": "Vloží komentář s ikonkou vykřičníku pro označení důležitých částí kódu."
+  },
+  "gs-qrGenerator": {
+    "prefix": "gs-qrCode",
+    "body": [
+      "/**",
+      " * Generuje QR kód pro zadaný text pomocí Google Charts API.",
+      " */",
+      "function vygenerujQRKod() {",
+      "  var text = 'https://github.com/JaromirIhln'; // Text pro QR kód",
+      "  var velikost = '200x200'; // Velikost QR kódu",
+      "  ",
+      "  var qrUrl = 'https://chart.googleapis.com/chart?' +",
+      "    'chs=' + velikost +",
+      "    '&cht=qr' +",
+      "    '&chl=' + encodeURIComponent(text);",
+      "  ",
+      "  Logger.log('🔲 QR kód URL: ' + qrUrl);",
+      "  ",
+      "  // Volitelně: Vlož QR kód jako obrázek do Sheets",
+      "  var blob = UrlFetchApp.fetch(qrUrl).getBlob();",
+      "  var sheet = SpreadsheetApp.getActiveSheet();",
+      "  sheet.insertImage(blob, 2, 2); // Řádek 2, sloupec B",
+      "  ",
+      "  SpreadsheetApp.getActiveSpreadsheet().toast('QR kód vygenerován!', 'Hotovo', 3);",
+      "}"
+    ],
+    "description": "🔲 Generuje QR kód pomocí Google Charts API a vloží ho do Sheets."
+  },
+  "gs-toastNotify": {
+    "prefix": "gs-toastNotify",
+    "body": [
+      "/**",
+      " * Systém toast notifikací s různými typy zpráv.",
+      " */",
+      "function zobrazNotifikaci() {",
+      "  var spreadsheet = SpreadsheetApp.getActiveSpreadsheet();",
+      "  ",
+      "  // Různé typy notifikací",
+      "  spreadsheet.toast('✅ Operace dokončena úspěšně!', 'Úspěch', 3);",
+      "  ",
+      "  Utilities.sleep(4000);",
+      "  spreadsheet.toast('⚠️ Varování: Zkontrolujte data!', 'Varování', 5);",
+      "  ",
+      "  Utilities.sleep(6000);",
+      "  spreadsheet.toast('❌ Chyba při zpracování!', 'Chyba', 8);",
+      "  ",
+      "  Utilities.sleep(9000);",
+      "  spreadsheet.toast('ℹ️ Informace: Proces běží na pozadí', 'Info', 4);",
+      "}",
+      "",
+      "// Pomocné funkce pro rychlé použití",
+      "function uspechNotifikace(zprava) {",
+      "  SpreadsheetApp.getActiveSpreadsheet().toast('✅ ' + zprava, 'Úspěch', 3);",
+      "}",
+      "",
+      "function chybaNotifikace(zprava) {",
+      "  SpreadsheetApp.getActiveSpreadsheet().toast('❌ ' + zprava, 'Chyba', 8);",
+      "}"
+    ],
+    "description": "🔔 Systém toast notifikací s různými typy zpráv a pomocnými funkcemi."
+  },
+  "gs-debugSystem": {
+    "prefix": "gsdebug",
+    "body": [
+      "/**",
+      " * Pokročilý debugging systém s error handling a detailním logováním.",
+      " */",
+      "function pokrocileDebugovani() {",
+      "  var startTime = new Date();",
+      "  var funkceNazev = 'pokrocileDebugovani';",
+      "  ",
+      "  try {",
+      "    debugLog('🚀 START', funkceNazev + ' spuštěno');",
+      "    ",
+      "    // Simulace práce s daty",
+      "    var data = SpreadsheetApp.getActiveSheet().getDataRange().getValues();",
+      "    debugLog('📊 DATA', 'Načteno ' + data.length + ' řádků');",
+      "    ",
+      "    // Simulace možné chyby",
+      "    if (data.length === 0) {",
+      "      throw new Error('Žádná data k zpracování');",
+      "    }",
+      "    ",
+      "    // Úspěšné dokončení",
+      "    var endTime = new Date();",
+      "    var duration = endTime - startTime;",
+      "    debugLog('✅ SUCCESS', funkceNazev + ' dokončeno za ' + duration + 'ms');",
+      "    ",
+      "  } catch (error) {",
+      "    errorLog(funkceNazev, error);",
+      "    throw error; // Re-throw pro další zpracování",
+      "  }",
+      "}",
+      "",
+      "function debugLog(typ, zprava) {",
+      "  var timestamp = new Date().toLocaleString();",
+      "  Logger.log('[' + timestamp + '] ' + typ + ': ' + zprava);",
+      "}",
+      "",
+      "function errorLog(funkce, error) {",
+      "  var timestamp = new Date().toLocaleString();",
+      "  Logger.log('🚨 [' + timestamp + '] ERROR in ' + funkce + ':');",
+      "  Logger.log('   Message: ' + error.message);",
+      "  Logger.log('   Stack: ' + error.stack);",
+      "}"
+    ],
+    "description": "🐛 Pokročilý debugging systém s error handling a strukturovaným logováním."
+  },
+  "gs-dataValidation": {
+    "prefix": "gs-inputValidation",
+    "body": [
+      "/**",
+      " * Systém validace dat s různými typy kontrol.",
+      " */",
+      "function validujData() {",
+      "  var sheet = SpreadsheetApp.getActiveSheet();",
+      "  var data = sheet.getDataRange().getValues();",
+      "  var chyby = [];",
+      "  ",
+      "  for (var i = 1; i < data.length; i++) { // Přeskočit hlavičku",
+      "    var radek = data[i];",
+      "    var chybyRadku = [];",
+      "    ",
+      "    // Validace emailu (sloupec A)",
+      "    if (!validujEmail(radek[0])) {",
+      "      chybyRadku.push('Neplatný email');",
+      "    }",
+      "    ",
+      "    // Validace čísla (sloupec B)",
+      "    if (!validujCislo(radek[1])) {",
+      "      chybyRadku.push('Neplatné číslo');",
+      "    }",
+      "    ",
+      "    // Validace datumu (sloupec C)",
+      "    if (!validujDatum(radek[2])) {",
+      "      chybyRadku.push('Neplatné datum');",
+      "    }",
+      "    ",
+      "    if (chybyRadku.length > 0) {",
+      "      chyby.push('Řádek ' + (i + 1) + ': ' + chybyRadku.join(', '));",
+      "    }",
+      "  }",
+      "  ",
+      "  if (chyby.length > 0) {",
+      "    Logger.log('❌ Nalezeny chyby:');",
+      "    chyby.forEach(function(chyba) {",
+      "      Logger.log('  • ' + chyba);",
+      "    });",
+      "    SpreadsheetApp.getActiveSpreadsheet().toast('Nalezeno ' + chyby.length + ' chyb!', 'Validace', 5);",
+      "  } else {",
+      "    Logger.log('✅ Všechna data jsou validní!');",
+      "    SpreadsheetApp.getActiveSpreadsheet().toast('Všechna data jsou v pořádku!', 'Validace OK', 3);",
+      "  }",
+      "}",
+      "",
+      "function validujEmail(email) {",
+      "  var regex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;",
+      "  return email && regex.test(email.toString());",
+      "}",
+      "",
+      "function validujCislo(cislo) {",
+      "  return !isNaN(cislo) && cislo !== '';",
+      "}",
+      "",
+      "function validujDatum(datum) {",
+      "  return datum instanceof Date && !isNaN(datum);",
+      "}"
+    ],
+    "description": "✅ Komplexní systém validace dat s kontrolou emailů, čísel a datumů."
   }
 }
+

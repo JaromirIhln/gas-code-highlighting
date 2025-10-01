@@ -1,53 +1,39 @@
 {
   "name": "GAS Light Colors",
   "type": "light",
+  "include": "./light_vs.json",
   "colors": {
     "editor.background": "#ffffff",
-    "editor.foreground": "#333333"
+    "editor.foreground": "#000000"
   },
   "tokenColors": [
     {
-      "scope": [
-        "variable.gas"
-      ],
-      "settings": {
-        "foreground": "#0070C0" // modrá pro variable
-      }
+      "scope": "comment",
+      "settings": { "foreground": "#4acd62", "fontStyle": "italic" }
     },
     {
-      "scope": [
-        "identifier.gas"
-      ],
-      "settings": {
-        "foreground": "#228B22", // zelená pro identifier,
-        "fontStyle": "bold"
-      }
+      "scope": "string",
+      "settings": { "foreground": "#b3883f" }
     },
     {
-      "scope": "string.quoted.double.gas, string.quoted.single.gas",
-      "settings": {
-        "foreground": "#b75501"
-      }
+      "scope": "constant.numeric", 
+      "settings": { "foreground": "#e3aae7" }
     },
     {
-      "scope": "comment.line.double-slash.gas, comment.block.gas",
-      "settings": {
-        "foreground": "#008000",
-        "fontStyle": "italic"
-      }
+      "scope": "keyword",
+      "settings": { "foreground": "#60b5fb", "fontStyle": "bold" }
     },
     {
-      "scope": "constant.numeric.gas",
-      "settings": {
-        "foreground": "#6abded"
-      }
+      "scope": "variable.other.gas",
+      "settings": { "foreground": "#4e59fd" }
     },
     {
-      "scope": "comment.documentation.gas",
-      "settings": {
-        "foreground": "#b8860b", // zlatá, nebo jiná barva dle preference
-        "fontStyle": "italic"
-      }
+      "scope": "entity.name.function.gas", 
+      "settings": { "foreground": "#efb962", "fontStyle": "bold" }
+    },
+    {
+      "scope": "support.class.gas",
+      "settings": { "foreground": "#4EC9B0", "fontStyle": "bold" }
     }
   ]
 }

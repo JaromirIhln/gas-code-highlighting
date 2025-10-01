@@ -1,38 +1,30 @@
 # Apps Script Syntax Colors (gas) by Jaromir Ihln
 
-## Popis
-
-> **English:**  
-> This extension brings syntax highlighting and useful snippets for Google Apps Script (.gs) files in Visual Studio Code. Ideal for developers who want to comfortably write and edit GAS scripts directly in VS Code.  
+> **English:**
+> This extension brings syntax highlighting and useful 23 basic and advanced snippets for Google Apps Script (.gs) files in Visual Studio Code. Ideal for developers who want to comfortably write and edit GAS scripts directly in VS Code.  
 > All features, snippets and installation instructions are described below (Czech).
 
- Rozšíření pro Visual Studio Code, které přináší zvýraznění syntaxe a snippety pro Google Apps Script (.gs) soubory. Ideální pro vývojáře, kteří chtějí pohodlně psát a upravovat GAS skripty přímo v VS Code.
+ Rozšíření pro Visual Studio Code, které přináší zvýraznění syntaxe a 23 základních a pokročilých snippetů pro Google Apps Script (.gs) soubory. Ideální pro vývojáře, kteří chtějí pohodlně psát a upravovat GAS skripty přímo v VS Code.
 
-## 🆕 Co je nového v verzi 0.3.6 - What’s New in Version 0.3.6
+## 🆕 Co je nového v verzi 0.5.0 - What’s New in Version 0.5.0
 
 > **English:**
-> All snippets and features listed below are fixed in this version 0.3.6.
-> All snippets and functions listed below are fixed in this version, including two new snippets.
+> All snippets and features listed below are fixed in this version 0.5.0.
+> All snippets and functions listed below are fixed in this version, including five new developer tools.
 > Some snippets require editing the `appsscript.json` manifest to add the necessary permissions. Use the `gsmanifest` snippet to include a basic manifest with common permissions - see instructions below.
-> `gsmanifest` - contains a basic modification of the `appscript.json` file to provide the necessary permissions to run scripts such as `gsmail`
-> `gstrigger` - newly `gs-timeTrigger`, `gscalendar-event`.
-> `gsimportant` - Inserts a comment with an exclamation mark icon to mark important parts of the code.
+> Added advanced developer tools for debugging, data validation, and notifications.
 
-- Všechny níže uvedené úryvky a funkce jsou v této verzi opraveny včetně dvou nových úryvků.
-- Některé snippety vyžadují úpravu `appsscript.json` manifestu pro přidání potřebných oprávnění. Použij snippet `gsmanifest` pro vložení základního manifestu s běžnými oprávněními  - návod viz níže.
-- `gsmanifest` - obsahuje základní úpravu souboru appscript.json o potřebná oprávnění ke spuštění scriptů jako je např. gsmail
-- `gstrigger` - nově gs-timeTrigger, gscal - nově gscalendar-event.
-- `gsimportant` - Vloží komentář s ikonkou vykřičníku pro označení důležitých částí kódu.
+- Všechny níže uvedené úryvky a funkce jsou v této verzi opraveny včetně pěti nových vývojářských nástrojů.
+- Některé snippety vyžadují úpravu `appsscript.json` manifestu pro přidání potřebných oprávnění. Použij snippet `gsmanifest` pro vložení základního manifestu s běžnými oprávněními - návod viz níže.
+- Přidány pokročilé vývojářské nástroje pro debugging, validaci dat a notifikace.
 
-### Nové snippety - New Snippets
+### Nové snippety v 0.5.0 - New Snippets in 0.5.0
 
-- `gsmail` - poslání emailu - send email
-- `gsmailatt` - email s přílohou - email with attachment
-- `gsdrive` - práce se soubory na Drive - working with Drive files
-- `gsfolder` - vytvoření složky na Drive - creating a folder on Drive
-- `gscalendar-event` - vytvoření události v kalendáři - creating a calendar event
-- `gslog` - strukturované logování - structured logging
-- `gs-timeTrigger` - nastavení časového triggeru - setting a time trigger
+- `gs-qrCode` - 🔲 generátor QR kódů pomocí Google Charts API - QR code generator using Google Charts API
+- `gs-toastNotify` - 🔔 systém toast notifikací s různými typy zpráv - toast notification system with different message types
+- `gs-debug` - 🐛 pokročilý debugging systém s error handling - advanced debugging system with error handling
+- `gs-inputValidation` - ✅ komplexní validace dat (email, čísla, datumy) - comprehensive data validation (email, numbers, dates)
+- `gs-important` - ❗ komentář s ikonkou pro označení důležitých částí - comment with icon for marking important code sections
 - `gsui-customMenu` - pokročilé UI menu s emojis - advanced UI menu with emojis
 - `gsfilter` - filtrování dat - filtering data
 - `gssort` - řazení dat podle více kritérií - sorting data by multiple criteria
@@ -63,7 +55,22 @@
 - Snippety pro rychlé vkládání kódu
 - Jednoduchá instalace (VSIX, Marketplace, ručně)
 
-## Příklady kódu - Snippets
+## 🎨 Nastavení barevného schématu - Color Theme Setup
+
+> **English:**
+> If syntax highlighting doesn't work properly, set the correct color theme:
+>
+> 1. Press `Ctrl+Shift+P` (Command Palette)
+> 2. Type "Color Theme" and select it
+> 3. Choose **"Light - Visual Studio - C++"** or **"Dark - Visual Studio - C++"**
+
+Pokud zvýraznění syntaxe nefunguje správně, nastavte správné barevné schéma:
+
+1. Stiskněte `Ctrl+Shift+P` (Command Palette)  
+2. Napište "Color Theme" a vyberte
+3. Zvolte **"Light - Visual Studio - C++"** nebo **"Dark - Visual Studio - C++"**
+
+## Jak používat snippety - How to Use Snippets
 
 > **English:**
 > The extension includes a set of snippets for quickly inserting typical GAS constructs. Just start typing `gs` and VS Code will offer available snippets, e.g.:
