@@ -1,7 +1,6 @@
 {
   "name": "GAS Light Colors",
   "type": "light",
-  "include": "./light_vs.json",
   "colors": {
     "editor.background": "#ffffff",
     "editor.foreground": "#000000"

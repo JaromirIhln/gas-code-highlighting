@@ -1,6 +1,6 @@
 {
   "name": "gas-syntax-highlighting",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "scripts": {
     "test": "vscode-test"
   },

@@ -1,4 +1,20 @@
-# Apps Script Syntax Colors (gas) by Jaromir Ihln
+# Apps Rozšíření pro Visual Studio Code, které přináší zvýraznění syntaxe a 23 základních a pokročilých snippetů pro Google Apps Script (.gs) soubory. Ideální pro vývojáře, kteří chtějí pohodlně psát a upravovat GAS skripty přímo v VS Code.
+
+## 🔧 Verze 0.5.1 - Hotfix!
+> **English:**
+> Minor fixes and improvements in version 0.5.1.
+**Changelog for 0.5.1:**
+
+- 🔧 **Color theme fix** - remove invalid include directives
+- 🧹 **Cleanup** - clean up broken references
+- ✅ **Theme stability** - cleaner theme definitions
+**Changelog pro 0.5.1:**
+
+- 🔧 **Fix barevných témat** - odstranění neplatných include direktiv
+- 🧹 **Cleanup** - vyčištění nefunkčních references  
+- ✅ **Theme stability** - čistší theme definice
+
+## 🆕 Co je nového v verzi 0.5.0 - What's New in Version 0.5.0ript Syntax Colors (gas) by Jaromir Ihln
 
 > **English:**
 > This extension brings syntax highlighting and useful 23 basic and advanced snippets for Google Apps Script (.gs) files in Visual Studio Code. Ideal for developers who want to comfortably write and edit GAS scripts directly in VS Code.  

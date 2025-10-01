@@ -1,7 +1,6 @@
 {
   "name": "GAS Simple Colors",
   "type": "dark",
-  "include": "./dark_vs.json",
   "colors": {
     "editor.background": "#1e1e1e",
     "editor.foreground": "#d4d4d4"
