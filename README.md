@@ -1,6 +1,7 @@
-# Apps Rozšíření pro Visual Studio Code, které přináší zvýraznění syntaxe a 23 základních a pokročilých snippetů pro Google Apps Script (.gs) soubory. Ideální pro vývojáře, kteří chtějí pohodlně psát a upravovat GAS skripty přímo v VS Code.
+# Apps Rozšíření pro Visual Studio Code, které přináší zvýraznění syntaxe a 23 základních a pokročilých snippetů pro Google Apps Script (.gs) soubory. Ideální pro vývojáře, kteří chtějí pohodlně psát a upravovat GAS skripty přímo v VS Code
 
-## 🔧 Verze 0.5.1 - Hotfix!
+## 🔧 Verze 0.5.1 - Hotfix
+
 > **English:**
 > Minor fixes and improvements in version 0.5.1.
 **Changelog for 0.5.1:**
