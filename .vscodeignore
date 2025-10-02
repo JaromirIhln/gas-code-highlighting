@@ -1,0 +1,31 @@
+# Exclude development files
+.vscode-test/**
+.vscode/settings.json
+.gitignore
+.git/**
+vscode-test.js
+test/**
+
+# Exclude documentation that's not needed in package
+package.txt
+
+# Exclude old VSIX packages
+*.vsix
+
+# Exclude node modules if any
+node_modules/**
+
+# Exclude temporary files
+*.tmp
+*.log
+
+# Keep only essential files for the extension:
+# - package.json (manifest)
+# - README.md (documentation)
+# - LICENSE.md (license)
+# - extension.js (main extension file)
+# - language-configuration.json (language config)
+# - syntaxes/ (syntax definitions)
+# - themes/ (color themes)
+# - images/ (icons and images)
+# - .vscode/jaromirihln.google-gas.code-snippets (snippets)
