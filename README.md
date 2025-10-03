@@ -4,7 +4,7 @@
 
 **🇨🇿 Česky:** Rozšíření pro VS Code s zvýrazněním syntaxe a **26 užitečnými snippety** pro Google Apps Script (.gs) soubory.
 
-## ✨ Nové v verzi 0.5.2 - New in 0.5.2
+## ✨ Nové v verzi 0.6.0 - New in 0.6.0
 
 - `gs-qrCodeAltern` - 🔲 **Robustní QR kód generátor** s fallback mechanismem - Robust QR code generator with fallback
 - `gsbarcode128` - 📊 **Code 128 barcode generátor** - Code 128 barcode generator  
@@ -66,7 +66,7 @@ Pro nejlepší zvýraznění syntaxe použij - For best syntax highlighting use:
 
 - [GitHub Repository](https://github.com/JaromirIhln/gas-code-highlighting)
 - [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=JaromrIhln.gas-syntax-highlighting)
-- [GAS Examples](https://github.com/JaromirIhln/start_g_appscript)
+- [GAS Examples](https://github.com/JaromirIhln/start_g_appscript) zde najdeš příklady - find examples here
 
 ## 📄 Licence - License
 
