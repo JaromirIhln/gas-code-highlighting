@@ -1,6 +1,6 @@
 {
   "name": "gas-syntax-highlighting",
-  "version": "0.6.0",
+  "version": "0.6.10",
   "scripts": {
     "test": "vscode-test"
   },
@@ -52,18 +52,6 @@
         "embeddedLanguages": {
           "meta.embedded.block.javascript": "javascript"
         }
-      }
-    ],
-    "themes": [
-      {
-        "label": "GAS Simple Colors",
-        "uiTheme": "vs-dark",
-        "path": "./themes/gas-simple-color-theme.json"
-      },
-      {
-        "label": "GAS Light Colors",
-        "uiTheme": "vs",
-        "path": "./themes/gas-light-color-theme.json"
       }
     ],
     "snippets": [

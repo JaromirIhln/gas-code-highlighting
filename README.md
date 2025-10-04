@@ -4,7 +4,11 @@
 
 **🇨🇿 Česky:** Rozšíření pro VS Code s zvýrazněním syntaxe a **26 užitečnými snippety** pro Google Apps Script (.gs) soubory.
 
-## ✨ Nové v verzi 0.6.0 - New in 0.6.0
+## Opravy - Fix for version 0.6.10
+
+- Oprava chyb tématu - Theme bug fix
+
+## ✨ Nové od verze 0.6.0 - New in 0.6.0
 
 - `gs-qrCodeAltern` - 🔲 **Robustní QR kód generátor** s fallback mechanismem - Robust QR code generator with fallback
 - `gsbarcode128` - 📊 **Code 128 barcode generátor** - Code 128 barcode generator  
