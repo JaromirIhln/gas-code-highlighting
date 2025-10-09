@@ -8,7 +8,13 @@
 
 - Oprava chyb tématu - Theme bug fix
 
-## ✨ Nové od verze 0.6.0 - New in 0.6.0
+## ✨ Nové od verze 0.7.0 - New in 0.7.0
+
+- `gs-calendar` - 📅 **Pracovní kalendář s rozsahy** - Work calendar with ranges and hour tracking
+- `gs-pivot` - 📊 **Pivot analýza s grafy** - Pivot table analysis with charts and statistics
+- `gs-export` - 💾 **Export systém** - Export to PDF, CSV, email reports
+
+## ✨ Předchozí verze 0.6.0 - Previous 0.6.0
 
 - `gs-qrCodeAltern` - 🔲 **Robustní QR kód generátor** s fallback mechanismem - Robust QR code generator with fallback
 - `gsbarcode128` - 📊 **Code 128 barcode generátor** - Code 128 barcode generator  
@@ -23,7 +29,7 @@
 
 - ✅ **Zvýraznění syntaxe** pro .gs soubory - Syntax highlighting for .gs files
 - 🎨 **Světlý i tmavý motiv** - Light and dark theme support  
-- 📝 **26 užitečných snippetů** - 26 useful snippets
+- 📝 **29+ užitečných snippetů** - 29+ useful snippets
 - 🔧 **Automatické rozpoznání** - Automatic language detection
 
 ## 📋 Hlavní snippety - Main Snippets
@@ -41,6 +47,9 @@
 | `gsbarcode128` | Code 128 barcode generátor - Code 128 barcode |
 | `gs-deleteLastImg` | Smazat poslední obrázek - Delete last image |
 | `gs-deleteAllImg` | Smazat všechny obrázky - Delete all images |
+| `gscalendar` | 📅 **Pracovní kalendář** - Work calendar with hour tracking |
+| `gspivot` | 📊 **Pivot analýza** - Advanced pivot analysis with charts |
+| `gsexport` | 💾 **Export systém** - Export to PDF/CSV/Email |
 | `gsmanifest` | Manifest pro .gs → zkopíruj do appsscript.json - Manifest for .gs → copy to appsscript.json |
 
 ## 🎯 Použití - Usage
