@@ -1,8 +1,14 @@
 # Apps Script Syntax Colors (gas) by Jaromir Ihln
 
-> **🇺🇸 English:** This extension brings syntax highlighting and **26 useful snippets** for Google Apps Script (.gs) files in Visual Studio Code.
+> **🇺🇸 English:** This extension brings syntax highlighting and **29 useful snippets** for Google Apps Script (.gs) files in Visual Studio Code.
 
-**🇨🇿 Česky:** Rozšíření pro VS Code s zvýrazněním syntaxe a **26 užitečnými snippety** pro Google Apps Script (.gs) soubory.
+**🇨🇿 Česky:** Rozšíření pro VS Code s zvýrazněním syntaxe a **29 užitečnými snippety** pro Google Apps Script (.gs) soubory.
+
+## ✨ Nové od verze 0.7.1 - New in 0.7.1
+
+- Opravy chyb a vylepšení funkcionality v Google Apps Script kódu pro pracovní kalendář. Přidání rozsahů, validací a lepšího formátování, barevné odlišení.
+
+- Bug fixes and functionality improvements in the Google Apps Script code for the work calendar. Added ranges, validations, and better formatting, color differentiation.
 
 ## Opravy - Fix for version 0.6.10
 
